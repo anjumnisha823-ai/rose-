@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Day Special</title>
+    <style>
+        body {
+            background-color: #ffe6f0; /* soft pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: #d6006c; /* dark pink text */
+        }
+        .container {
+            background: #fff0f5;
+            padding: 50px 70px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+        .rose {
+            font-size: 2rem;
+            margin: 0 5px;
+        }
+        button {
+            padding: 12px 25px;
+            margin: 20px 15px 0 15px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .yes {
+            background-color: #ff4da6;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <h1>🌹 Happy Rose Day! 🌹</h1>
+        <p>Dear <strong>Masidur</strong>,</p>
+        <p>Will you be my Valentine? 🌹</p>
+        <button class="yes" onclick="showYesMessage()">Yes</button>
+        <button class="no" onclick="noClick()">No</button>
+    </div>
+
+    <script>
+        function showYesMessage() {
+            const container = document.getElementById('mainContainer');
+            container.innerHTML = `
+                <h1>🌹 Yay! 🌹</h1>
+                <p>Thank you, Masidur! 💖</p>
+                <p>Wishing you endless love and happiness this Rose Day! 🌹🌹🌹</p>
+            `;
+        }
+
+        function noClick() {
+            alert("Oh no! Try again later 🌹");
+            location.reload(); // page refresh kore urei jabe
+        }
+    </script>
+</body>
+</html>
